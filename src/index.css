@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-canvas text-ink font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display uppercase tracking-wide text-indigo-600;
+  }
+}
+
+@layer components {
+  /* Garment care-label style tag, used for statuses, SKUs, quotation numbers */
+  .label-tag {
+    @apply inline-flex items-center gap-1.5 border border-ink/20 px-2 py-0.5 text-xs font-mono tracking-tag uppercase;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-display uppercase tracking-tag transition-colors disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-indigo-500 text-canvas hover:bg-indigo-600;
+  }
+  .btn-secondary {
+    @apply btn border border-indigo-500 text-indigo-500 hover:bg-indigo-50;
+  }
+  .btn-danger {
+    @apply btn bg-rust-500 text-canvas hover:bg-rust-600;
+  }
+  .card {
+    @apply bg-white/60 border border-ink/10;
+  }
+  .input-field {
+    @apply w-full border border-ink/25 bg-white px-3 py-2 text-sm font-body focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500;
+  }
+  .field-label {
+    @apply block text-xs font-display uppercase tracking-tag text-ink-soft mb-1;
+  }
+  .section-rule {
+    @apply border-t border-ink/15;
+  }
+}
