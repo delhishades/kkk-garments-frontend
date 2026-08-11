@@ -96,4 +96,7 @@ export const router = createBrowserRouter([
     ],
   },
   { path: "*", element: <NotFound /> },
-]);
+],
+{
+    basename: "/kkk-garments-frontend",
+});
